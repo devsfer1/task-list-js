@@ -1,0 +1,140 @@
+/* === Estilizações Globais === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #E55C8A;
+}
+
+
+/* === Estilização === */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#todo {
+    background-color: #3C424A;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+.task {
+    background-color: #343A40;   
+    color: #b0b3b8;
+    border-radius: 5px;
+    text-indent: 10px;
+    width: 300px;
+    padding: 10px 5px;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.search-form {
+    border-radius: 20px;
+    align-self: center;
+}
+
+#search-text {
+    border-radius: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 24px;
+    letter-spacing: 0.1ch;
+    color: #ededed;
+    text-align: center;
+}
+
+.task {
+    padding: 10px 5px;
+    margin:0 0 20px 0;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task--delete.task {
+    transition: linear 0.2s;
+    opacity: 0;
+}
+
+.task-name {
+    color: #ededed;
+    font-family: sans-serif;
+}
+
+.del-btn {
+    padding: 5px 10px;
+    background: #484F59;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #A3AAB7;
+}
+
+.del-btn:hover {
+    background: #272a2e;   
+    color: #c3cbd9;
+    transition: ease 0.2s;
+}
+
+#add-btn {
+    padding: 10px 5px;
+    cursor: pointer;  
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#add-btn:hover {
+    background: #b3b3b3;
+    transition: ease 0.2s;
+}
+
+#input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media(max-width: 900px){
+    #todo {
+        padding: 20px;             
+    }
+}
