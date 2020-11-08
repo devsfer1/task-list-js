@@ -1,4 +1,4 @@
-/* === Estilizações Globais === */
+    /* === Estilizações Globais === */
 
 * {
     margin: 0;
@@ -128,11 +128,21 @@ input[type="text"],
     flex-direction: column;
 }
 
-.hidden {
-    display: none;
-}
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ input:focus:-moz-placeholder { /* Firefox 18- */
+    color: transparent;  
+ }
+ input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color: transparent;  
+ }
+ input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ }
 
 
+/* === Responsividade === */
 @media(max-width: 900px){
     #todo {
         padding: 20px;             

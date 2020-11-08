@@ -1,6 +1,7 @@
 var addBtn = document.getElementById('add-btn');
 var todo = document.getElementById('todo');
 var searchInput = document.getElementById('search-input');
+var form = document.getElementById('input-form');
 
 //Eventos
 addBtn.addEventListener('click', adicionarTarefa);
@@ -94,16 +95,14 @@ filter = searchValue.value.toUpperCase();
 
 
 
-//Restaurar Placeholder ao original
-var form = document.getElementById('input-form');
-
-
+//Resetar Placeholder
 var inputTask = document.getElementById('task-input');
 
-form.addEventListener('submit', restaurarPlaceholder);
+form.addEventListener('click', restaurarPlaceholder);
 
 function restaurarPlaceholder(e){
-    e.preventDefault();
+  e.preventDefault();
 
-    inputTask.style.backgroundColor = 'bteste';
+  inputTask.value  = '';
 }
+
