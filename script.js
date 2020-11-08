@@ -93,8 +93,6 @@ filter = searchValue.value.toUpperCase();
 }
 
 
-
-
 //Resetar Placeholder
 var inputTask = document.getElementById('task-input');
 
@@ -105,4 +103,6 @@ function restaurarPlaceholder(e){
 
   inputTask.value  = '';
 }
+
+
 

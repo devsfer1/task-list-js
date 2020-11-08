@@ -34,19 +34,33 @@ body {
 }
 
 input[type="text"] {
-    width: 300px;
+    width: 100%;
     height: 40px;
     outline: none;
     border: none;
     margin-bottom: 20px;
 }
 
+.search-form {
+    align-self: center;
+    width: 300px;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #b0b3b8;
+}
+
+
+
 input[type="text"],
 .task {
     background-color: #343A40;   
     color: #b0b3b8;
     border-radius: 5px;
-    text-indent: 10px;
     width: 300px;
     padding: 10px 5px;
 }
@@ -55,13 +69,9 @@ input[type="text"],
     text-align: center;
 }
 
-.search-form {
+#search-input {
     border-radius: 20px;
-    align-self: center;
-}
-
-#search-text {
-    border-radius: 20px;
+    text-indent: 40px;
 }
 
 .title {
@@ -80,6 +90,8 @@ input[type="text"],
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: ease 0.2s;
+    text-indent: 10px;
 }
 
 .task--delete.task {
@@ -128,6 +140,10 @@ input[type="text"],
     flex-direction: column;
 }
 
+input[type = text]:focus {
+    box-shadow: 0 0 0 2px;
+}
+
 input:focus::-webkit-input-placeholder {
     color: transparent;
  }
@@ -141,6 +157,18 @@ input:focus::-webkit-input-placeholder {
     color: transparent;  
  }
 
+.copy {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    font-size: 14px;
+    color: #d1d1d1;
+}
+
+.github-icon,
+.devsfe {
+    color: #272a2e;
+}
 
 /* === Responsividade === */
 @media(max-width: 900px){
