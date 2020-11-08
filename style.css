@@ -33,12 +33,13 @@ body {
     border-radius: 10px;
 }
 
-input[type="text"] {
-    width: 100%;
-    height: 40px;
-    outline: none;
-    border: none;
+.task__title {
     margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: 0.1ch;
+    color: #ededed;
+    text-align: center;
 }
 
 .search-form {
@@ -54,7 +55,18 @@ input[type="text"] {
     color: #b0b3b8;
 }
 
+#search-input {
+    border-radius: 20px;
+    text-indent: 40px;
+}
 
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin-bottom: 1.25em;
+}
 
 input[type="text"],
 .task {
@@ -65,33 +77,41 @@ input[type="text"],
     padding: 10px 5px;
 }
 
+input[type = text]:focus {
+    box-shadow: 0 0 0 2px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ input:focus:-moz-placeholder { /* Firefox 18- */
+    color: transparent;  
+ }
+ input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color: transparent;  
+ }
+ input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ }
+
 ::placeholder {
-    text-align: center;
-}
-
-#search-input {
-    border-radius: 20px;
-    text-indent: 40px;
-}
-
-.title {
-    margin-bottom: 20px;
-    font-weight: 200;
-    font-size: 24px;
-    letter-spacing: 0.1ch;
-    color: #ededed;
     text-align: center;
 }
 
 .task {
     padding: 10px 5px;
-    margin:0 0 20px 0;
+    margin:0 0 1.25em 0;
     text-align: start;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: ease 0.2s;
-    text-indent: 10px;
+    text-indent: 0.625em;
+}
+
+.task-name {
+    color: #ededed;
+    font-family: sans-serif;
 }
 
 .task--delete.task {
@@ -99,9 +119,9 @@ input[type="text"],
     opacity: 0;
 }
 
-.task-name {
-    color: #ededed;
-    font-family: sans-serif;
+#input-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .del-btn {
@@ -127,7 +147,6 @@ input[type="text"],
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
 }
 
 #add-btn:hover {
@@ -135,38 +154,16 @@ input[type="text"],
     transition: ease 0.2s;
 }
 
-#input-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input[type = text]:focus {
-    box-shadow: 0 0 0 2px;
-}
-
-input:focus::-webkit-input-placeholder {
-    color: transparent;
- }
- input:focus:-moz-placeholder { /* Firefox 18- */
-    color: transparent;  
- }
- input:focus::-moz-placeholder {  /* Firefox 19+ */
-    color: transparent;  
- }
- input:focus:-ms-input-placeholder {  
-    color: transparent;  
- }
-
 .copy {
     position: absolute;
     top: 90%;
     left: 70%;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #d1d1d1;
 }
 
 .github-icon,
-.devsfe {
+.github-link     {
     color: #272a2e;
 }
 
@@ -175,4 +172,13 @@ input:focus::-webkit-input-placeholder {
     #todo {
         padding: 20px;             
     }
+}
+
+@media(max-width: 1100px) {
+    .copy {
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }    
 }
