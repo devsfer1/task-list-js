@@ -105,5 +105,5 @@ form.addEventListener('submit', restaurarPlaceholder);
 function restaurarPlaceholder(e){
     e.preventDefault();
 
-    inputTask.style.backgroundColor = 'blue';
+    inputTask.style.backgroundColor = 'bteste';
 }
